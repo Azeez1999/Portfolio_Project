@@ -3,7 +3,7 @@ Welcome to my personal portfolio! This is where I showcase my work and provide i
 
 ## Demo
 You can check out my portfolio live at the following link:
-https://teamsarose.github.io/
+https://github.com/Azeez1999
 
 ## Features
 - Interactive animations
