@@ -1,0 +1,387 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #333;
+    padding: 15px;
+    position: fixed;
+    width: 98%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav .logo span {
+    color: #007bff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 2px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #007bff;
+}
+
+/* Hamburger Menu */
+.menu {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    nav ul.showMenu {
+        display: flex;
+    }
+
+    .menu {
+        display: block;
+    }
+}
+
+/* Home Page */
+.home-page {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 100px 20px;
+}
+
+.text-box {
+    max-width: 50%;
+}
+
+.text-box h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.skills {
+    color: #007bff;
+}
+
+.text-box p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.icon-box a {
+    font-size: 2em;
+    margin-right: 20px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.icon-box a:hover {
+    color: #007bff;
+}
+
+.btn {
+    margin-top: 20px;
+}
+
+.downloadBtn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.downloadBtn:hover {
+    background-color: #0056b3;
+}
+
+.img-box img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .home-page {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-box {
+        max-width: 100%;
+    }
+
+    .img-box {
+        margin-top: 30px;
+    }
+}
+
+/* About Me Page */
+.about-page {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 100px 20px;
+    background-color: #fff;
+}
+
+.about-img img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.about-content {
+    max-width: 50%;
+}
+
+.heading {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.heading span {
+    color: #007bff;
+}
+
+.about-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.custom-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.custom-btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .about-page {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content {
+        max-width: 100%;
+        margin-top: 30px;
+    }
+}
+
+/* Projects Page */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 100px 20px;
+    background-color: #f4f4f4;
+}
+
+.project-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    font-size: 1.5em;
+    margin-top: 15px;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 1em;
+    color: #666;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Contact Page */
+.contact-page {
+    padding: 100px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact-page h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact-page h2 span {
+    color: #007bff;
+}
+
+.input-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-box input,
+.contact-page textarea {
+    width: 48%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-page textarea {
+    width: 100%;
+    resize: none;
+}
+
+.contact-page button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-page button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .input-box {
+        flex-direction: column;
+    }
+
+    .input-box input {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.footer .footer-icontop {
+    margin-top: 20px;
+}
+
+.footer .footer-icontop a {
+    color: #fff;
+    font-size: 2em;
+    transition: color 0.3s;
+}
+
+.footer .footer-icontop a:hover {
+    color: #007bff;
+}
+
+.footer-text p {
+    margin: 0;
+    font-size: 1em;
+}
